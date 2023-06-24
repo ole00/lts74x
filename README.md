@@ -1,6 +1,8 @@
 # lts74x
 Yet another 74x-series IC logic tester that uses Arduino board for testing the logic states of the IC.
 
+![Board image](https://github.com/ole00/lts74x/raw/master/img/lts74x_top.jpg "lts74x")
+
 Lts74x was inspired by the following propjects:
 * Integrated circuit tester: https://github.com/Johnlon/integrated-circuit-tester
 * Smart IC Tester: https://github.com/akshaybaweja/Smart-IC-Tester
@@ -11,6 +13,7 @@ Features:
 * Tests some 20 pin 74x series ICs, requires Arduino Nano modification (LED and pull resistor removals)
 * Uses OLED screen for IC selection
 * Displays basic IC pinout and indicates failed pins after the test.
+* Screen saver to prevent OLED screen burn.
 * Supports testing Z states on IC pins.
 * Supports Clock pin.
 * Supports latched pin testing.
