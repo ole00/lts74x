@@ -112,15 +112,12 @@ Q&A:
      one is the GPIO Expander address 0x18 and the second one is the OLED screen using address 0x78.
      Modify OLED_ADDRESS value in lts74x20.ino sketch if your OLED address is different.
 
-
-
 * what is the On switch used for? When do I use it?
 
     - Normally, the switch should be in the Off position (LED is not lit). Also when insering the IC chip or when removing the IC chip
       from the ZIF socket the switch should be Off. Just before you start the test the switch should be turned On.
       So in general: insert the IC when the switch is Off, then turn the switch On and run the test. When finished turn the switch Off,
       and remove the IC chip from the socket.
-
 
 * Itested a branch new IC chip and it fails during the test. Some pins (or a single pin) indicate a failure.
     - Double check all resistors leading to the ZIF socket pins (1 kOhm) and weak pull down resistors (470 kOhm) are well soldered.
@@ -133,16 +130,17 @@ Q&A:
     board Revision 3. Rev. 3 is currently the one available for download.
   
 * What is the mod to let me test 20 pin ICs?
-    - See image bellow. Basically, remove few pull resistors by touching them with a hot soldering iron (~350C) for 4 seconds and then
-      while pushing them a bit sideways they will slide off of its footprints on the PCB.
+    - See image bellow. Basically, remove few pull resistors (marked red on the bellow image) by touching them with a hot soldering iron (~350C) for 4 seconds and then
+      while pushing them a bit sideways they will slide-off of its footprints on the PCB.
       **Important:** before doing the mod make sure the Arduino sketch is uploaded. After the mod is done, it won't be possible to upload the sketch
       via USB. Uploading will be possible, but it is less convenient and requires another Arduino board.
     - remove the RX and TX resistors or LEDs on the top. 
     - remove the L resistor or LED on the top
     - remove the resistors on the bottom of the board. Please note that my Arduino nano is a clone, it does not even use a genuine CH340
-       serial chip. If you have a different Arduino Nano board that the one pictured bellow the you may need to remove other resistors
-       or it might be easier to remove the serial chip itself.
-    - solder headers to allow sketch reprogramming in the future
+       serial chip. If you have a different Arduino Nano board than the one pictured bellow, then you may need to remove other resistors
+       or it might be more convenient to remove the serial chip itself.
+    - solder headers to allow sketch reprogramming in the future (marked green on the bellow image)
+![Board image](https://github.com/ole00/lts74x/raw/master/img/nano_no_serial_marked.jpg "Nano serial mod - click to zoom")
 
 * How is the Z state stested?
     - The Z - or High impedance - state test is based on 2 facts: 
