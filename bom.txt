@@ -1,0 +1,18 @@
+BOM for lts74x rev 3
+--------------------------------------------------------------------------------
+"Item","Qty","Reference(s)","info"
+
+"1","1","A1","Arduino_Nano_v3.x","http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf"
+"2","1","C2","0.1u -  Capacitor_SMD:C_0805_2012Metric"
+"3","1","C4","22u - Capacitor_SMD:C_1210_3225Metric"
+"4","1","D1","LED","LED_THT:LED_D5.0mm"
+"5","1","J1","ZIF Socket 02x10 narrow 2.54mm pin pitch Package_DIP:DIP-20_W7.62mm"
+"6","1","J2","OLED SSD1306 Connector_PinHeader_2.54mm"
+"7","2","Q1, Q2","N_MOSFET Enhancement Package_TO_SOT_SMD:SOT-23-3 Any N mosfet enhancement with low-ish RDS On value"
+"8","19","R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R47","1k","Resistor_SMD:R_0805_2012Metric"
+"9","18","R19, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R30, R31, R32, R33, R34, R35, R36","470k","Resistor_SMD:R_0805_2012Metric"
+"10","11","R37, R38, R39, R40, R41, R42, R43, R44, R45, R49, R50","10k","Resistor_SMD:R_0805_2012Metric"
+"11","2","R46, R48","2k2","Resistor_SMD:R_0805_2012Metric"
+"12","4","SW1, SW2, SW3, SW4","Button_Switch_THT:SW_PUSH_6mm"
+"13","1","SW5","SW_Push_DPDT - Button_Switch_THT EG1271_SPDT"
+"14","1","U1","PCA9557D","GPIO expander Package_SO:SO-16_3.9x9.9mm_P1.27mm","https://www.nxp.com/docs/en/data-sheet/PCA9557.pdf"
