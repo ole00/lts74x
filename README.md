@@ -151,7 +151,7 @@ Q&A:
      leading to the pin. So, if the Arduino sets a pin leading to the IC's Z pin as Input with internall Pull up (~30k), then Arduino should 
      read it as High. Also, if Arduino sets a pin leading to the IC's Z pin as Input (external pull down, see above) then Arduino should
      read it as Low. If the reeading is incorrect then the IC's pin is not in the Z state as it 'overrides' the pull resistors by sinking or 
-     sourcing the current. That means it's not in Z state and the pin the pin is malfunctioning or is damaged. The Z test does exactly that:
+     sourcing the current. That means it's not in Z state and the pin is malfunctioning or is damaged. The Z test does exactly that:
      sets the pin as Input with internal pull up and reads the value, then sets it as Input with external pull down and reads the value.
      If the read values are correct the pin is in Z state. There are few more details involved in the actuall Z test (like there must be a small
      delay allowing the pull resistor to react before reading the value etc.), so check the source code if you are interested.
