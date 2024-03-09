@@ -47,8 +47,8 @@ How lts74x works:
   failed pins is displayed on the screen.
 
 * Each test is defined as a text string where each character in the string corresponds to a certain pin state. Pins marked as 0 or 1
-  are the input pins and their value is set via Arduino to the desired value (Low or High repsectively). Pins marked
-  as L, H or Z are the input pins and their value is read by Arduino and evaluated. L marked pins must read digital 0, H marked
+  are the IC input pins and their value is set via Arduino to the desired value (Low or High repsectively). Pins marked
+  as L, H or Z are the IC output pins and their value is read by Arduino and evaluated. L marked pins must read digital 0, H marked
   pins must read digital 1 from the correspondig GPIO. Z marked pins test the high impedance output (see Q&A section for details) 
   of the IC chip.
   
@@ -119,7 +119,7 @@ Q&A:
       So in general: insert the IC when the switch is Off, then turn the switch On and run the test. When finished turn the switch Off,
       and remove the IC chip from the socket.
 
-* Itested a branch new IC chip and it fails during the test. Some pins (or a single pin) indicate a failure.
+* I tested a branch new IC chip and it fails during the test. Some pins (or a single pin) indicate a failure.
     - Double check all resistors leading to the ZIF socket pins (1 kOhm) and weak pull down resistors (470 kOhm) are well soldered.
      There might be a missing solder joint on that particular pin or on a pin that contributes to the logical output of the failed pin.
      Test the resistance by attaching multimeter probes to an Arduin pin and corresponding ZIF socket pin, and also between
@@ -143,12 +143,12 @@ Q&A:
 ![Board image](https://github.com/ole00/lts74x/raw/master/img/nano_no_serial_marked.jpg "Nano serial mod - click to zoom")
 
 * How is the Z state stested?
-    - The Z - or High impedance - state test is based on 2 facts: 
-    - The lts74x circuit has very weak external pull down resistors (470k) on all ZIF pins. During testing of High or Low states this pull down resistor
+    - The Z - or High impedance - state test is based on 2 following facts: 
+    - The lts74x circuit has very weak external pull down resistors (470k Ohm) on all ZIF pins. During testing of High or Low states this pull down resistor
       does not affect the results read from the pins, because IC currents are much stronger.
     - The IC pin in Z state should not source or sink any current from the wire connected to the pin (if it does, it is an error).
      Therefore the pin's current (if there is any teeny tiny one) should not have enough 'strength' to override the actual state of the wire
-     leading to the pin. So, if the Arduino sets a pin leading to the IC's Z pin as Input with internall Pull up (~30k), then Arduino should 
+     leading to the pin. So, if the Arduino sets a pin leading to the IC's Z pin as Input with internall Pull up (~30k Ohm), then Arduino should 
      read it as High. Also, if Arduino sets a pin leading to the IC's Z pin as Input (external pull down, see above) then Arduino should
      read it as Low. If the reeading is incorrect then the IC's pin is not in the Z state as it 'overrides' the pull resistors by sinking or 
      sourcing the current. That means it's not in Z state and the pin is malfunctioning or is damaged. The Z test does exactly that:
