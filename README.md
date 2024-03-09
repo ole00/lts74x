@@ -119,7 +119,7 @@ Q&A:
       So in general: insert the IC when the switch is Off, then turn the switch On and run the test. When finished turn the switch Off,
       and remove the IC chip from the socket.
 
-* I tested a branch new IC chip and it fails during the test. Some pins (or a single pin) indicate a failure.
+* I tested a brand new IC chip and it fails during the test. Some pins (or a single pin) indicate a failure.
     - Double check all resistors leading to the ZIF socket pins (1 kOhm) and weak pull down resistors (470 kOhm) are well soldered.
      There might be a missing solder joint on that particular pin or on a pin that contributes to the logical output of the failed pin.
      Test the resistance by attaching multimeter probes to an Arduin pin and corresponding ZIF socket pin, and also between
